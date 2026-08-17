@@ -25,8 +25,8 @@ class QuantityStepper extends StatelessWidget {
       children: [
         _StepButton(
           onTap: onDecrement,
-          child: Icon(Icons.remove_rounded, size: 16, color: AppColors.primaryGreenDark),
           background: AppColors.primaryGreenDark.withValues(alpha: 0.12),
+          child: Icon(Icons.remove_rounded, size: 16, color: AppColors.primaryGreenDark),
         ),
         SizedBox(
           width: 28,
@@ -38,8 +38,8 @@ class QuantityStepper extends StatelessWidget {
         ),
         _StepButton(
           onTap: onIncrement,
-          child: const Icon(Icons.add_rounded, size: 16, color: Colors.white),
           gradient: AppColors.primaryGradient,
+          child: const Icon(Icons.add_rounded, size: 16, color: Colors.white),
         ),
       ],
     );

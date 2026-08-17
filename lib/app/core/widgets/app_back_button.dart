@@ -39,7 +39,7 @@ class SoftIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bg = background ?? Theme.of(context).appColors.cardColor;
+    final bg = background ?? context.appColors.cardColor;
     return Material(
       color: bg,
       shape: const CircleBorder(),

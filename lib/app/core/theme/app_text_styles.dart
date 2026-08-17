@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'app_colors.dart';
 
 /// The Figma file uses the licensed "BentonSans" family (Bold / Medium / Book / Regular).
 /// We substitute the closest-matching open font — Plus Jakarta Sans — which shares
-/// BentonSans' geometric grotesque proportions and full weight range.
+/// BentonSans' geometric grotesque proportions and full weight range. Bundled locally
+/// (assets/fonts) so the app works fully offline instead of fetching at runtime.
 class AppTextStyles {
   AppTextStyles._();
+
+  static const _family = 'PlusJakartaSans';
 
   static TextStyle _base({
     required double size,
@@ -15,7 +16,8 @@ class AppTextStyles {
     double? height,
     double? letterSpacing,
   }) {
-    return GoogleFonts.plusJakartaSans(
+    return TextStyle(
+      fontFamily: _family,
       fontSize: size,
       fontWeight: weight,
       color: color,
@@ -44,7 +46,8 @@ class AppTextStyles {
       _base(size: 10, weight: FontWeight.w700, color: color, height: 1.31, letterSpacing: 0.5);
 
   // Brand logo wordmark ("FoodNinja")
-  static TextStyle logo(Color color) => GoogleFonts.baloo2(
+  static TextStyle logo(Color color) => TextStyle(
+        fontFamily: 'Baloo2',
         fontSize: 32,
         fontWeight: FontWeight.w700,
         color: color,

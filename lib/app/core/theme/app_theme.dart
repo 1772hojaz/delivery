@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 import 'app_theme_extension.dart';
 
 class AppTheme {
   AppTheme._();
 
+  static const _fontFamily = 'PlusJakartaSans';
+
   static ThemeData get light => ThemeData(
         useMaterial3: true,
         brightness: Brightness.light,
         scaffoldBackgroundColor: AppColors.lightBackground,
-        textTheme: GoogleFonts.plusJakartaSansTextTheme(),
+        fontFamily: _fontFamily,
         colorScheme: const ColorScheme.light(
           primary: AppColors.primaryGreenDark,
           secondary: AppColors.accentOrange,
@@ -30,7 +31,7 @@ class AppTheme {
         useMaterial3: true,
         brightness: Brightness.dark,
         scaffoldBackgroundColor: AppColors.darkBackground,
-        textTheme: GoogleFonts.plusJakartaSansTextTheme(ThemeData(brightness: Brightness.dark).textTheme),
+        fontFamily: _fontFamily,
         colorScheme: const ColorScheme.dark(
           primary: AppColors.primaryGreenLight,
           secondary: AppColors.accentOrange,

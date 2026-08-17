@@ -101,7 +101,14 @@ class _NavItem extends StatelessWidget {
               duration: const Duration(milliseconds: 200),
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
               decoration: BoxDecoration(
-                gradient: active ? AppColors.primaryGradient.scale(0.1) : null,
+                gradient: active
+                    ? LinearGradient(
+                        colors: [
+                          AppColors.primaryGreenLight.withValues(alpha: 0.1),
+                          AppColors.primaryGreenDark.withValues(alpha: 0.1),
+                        ],
+                      )
+                    : null,
                 color: active ? null : Colors.transparent,
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -163,16 +170,6 @@ class _Dot extends StatelessWidget {
       height: 10,
       width: 10,
       decoration: const BoxDecoration(color: AppColors.error, shape: BoxShape.circle),
-    );
-  }
-}
-
-extension on LinearGradient {
-  LinearGradient scale(double opacity) {
-    return LinearGradient(
-      begin: begin,
-      end: end,
-      colors: colors.map((c) => c.withValues(alpha: opacity)).toList(),
     );
   }
 }
