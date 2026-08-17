@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
+import 'app/core/controllers/cart_controller.dart';
 import 'app/core/theme/app_theme.dart';
 import 'app/core/theme/theme_controller.dart';
 import 'app/routes/app_pages.dart';
@@ -10,6 +11,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
   Get.put(ThemeController(), permanent: true);
+  Get.put(CartController(), permanent: true);
   runApp(const FoodNinjaApp());
 }
 
