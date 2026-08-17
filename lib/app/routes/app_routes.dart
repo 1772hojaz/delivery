@@ -1,0 +1,44 @@
+abstract class Routes {
+  Routes._();
+
+  static const splash = '/splash';
+  static const onboarding = '/onboarding';
+  static const signUp = '/sign-up';
+  static const signIn = '/sign-in';
+  static const verificationCode = '/verification-code';
+  static const viaMethod = '/via-method';
+  static const createPassword = '/create-password';
+  static const signupProcess = '/signup-process';
+  static const paymentMethodSetup = '/payment-method-setup';
+  static const uploadPhoto = '/upload-photo';
+  static const uploadPreview = '/upload-preview';
+  static const onboardingLocation = '/onboarding-location';
+  static const signupSuccess = '/signup-success';
+  static const successNotification = '/success-notification';
+  static const home = '/home';
+  static const exploreRestaurant = '/explore-restaurant';
+  static const filter = '/filter';
+  static const exploreMenu = '/explore-menu';
+  static const exploreRestaurantFiltered = '/explore-restaurant-filtered';
+  static const exploreMenuFiltered = '/explore-menu-filtered';
+  static const detailProduct = '/detail-product';
+  static const detailMenu = '/detail-menu';
+  static const profile = '/profile';
+  static const trackOrder = '/track-order';
+  static const setLocation = '/set-location';
+  static const orderDetails = '/order-details';
+  static const orderCart = '/order-cart';
+  static const payments = '/payments';
+  static const editPayment = '/edit-payment';
+  static const editLocation = '/edit-location';
+  static const yourOrders = '/your-orders';
+  static const voucherPromo = '/voucher-promo';
+  static const message = '/message';
+  static const chatDetails = '/chat-details';
+  static const callRinging = '/call-ringing';
+  static const call = '/call';
+  static const finishOrder = '/finish-order';
+  static const rateFood = '/rate-food';
+  static const rateRestaurant = '/rate-restaurant';
+  static const notifications = '/notifications';
+}
