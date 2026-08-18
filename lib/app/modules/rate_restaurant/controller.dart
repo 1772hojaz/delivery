@@ -9,11 +9,13 @@ class RateRestaurantController extends GetxController {
   void setRating(int value) => rating.value = value;
 
   void submit() {
-    Get.offAllNamed(Routes.home);
-    Get.snackbar(
-      'Thank you!',
-      'Your feedback helps other food lovers make great choices.',
-      snackPosition: SnackPosition.BOTTOM,
+    Get.offAllNamed(
+      Routes.successNotification,
+      arguments: {
+        'title': 'Thank You!',
+        'message': 'Your feedback helps other food lovers make great choices.',
+        'ctaLabel': 'Back to Home',
+      },
     );
   }
 

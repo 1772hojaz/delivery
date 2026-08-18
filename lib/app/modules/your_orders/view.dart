@@ -67,6 +67,7 @@ class YourOrdersView extends GetView<YourOrdersController> {
                   _OrderList(
                     orders: controller.completedOrders,
                     emptyLabel: 'No completed orders yet',
+                    onTapOrder: (order) => Get.toNamed(Routes.orderDetails),
                   ),
                 ],
               ),

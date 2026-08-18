@@ -44,6 +44,33 @@ class OrderCartView extends GetView<OrderCartController> {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(24, 4, 24, 8),
+              child: SoftCard(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                onTap: () => Get.toNamed(Routes.setLocation),
+                child: Row(
+                  children: [
+                    const Icon(Icons.location_on_rounded, color: AppColors.primaryGreenDark, size: 22),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Deliver to', style: AppTextStyles.caption(ext.mutedTextColor)),
+                          Text(
+                            'Jl. Kemang Raya No. 12, Jakarta Selatan',
+                            style: AppTextStyles.bodyMedium(ext.headingColor),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Icon(Icons.chevron_right_rounded, color: ext.mutedTextColor),
+                  ],
+                ),
+              ),
+            ),
             Expanded(
               child: Obx(() {
                 final items = controller.cart.items;

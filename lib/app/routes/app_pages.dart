@@ -1,7 +1,5 @@
 import 'package:get/get.dart';
 import 'app_routes.dart';
-import '../modules/splash/view.dart';
-import '../modules/splash/binding.dart';
 import '../modules/onboarding/view.dart';
 import '../modules/onboarding/binding.dart';
 import '../modules/sign_up/view.dart';
@@ -84,10 +82,9 @@ import '../modules/notifications/binding.dart';
 class AppPages {
   AppPages._();
 
-  static const initial = Routes.splash;
+  static const initial = Routes.onboarding;
 
   static final routes = <GetPage>[
-  GetPage(name: Routes.splash, page: () => const SplashView(), binding: SplashBinding()),
   GetPage(name: Routes.onboarding, page: () => const OnboardingView(), binding: OnboardingBinding()),
   GetPage(name: Routes.signUp, page: () => const SignUpView(), binding: SignUpBinding()),
   GetPage(name: Routes.signIn, page: () => const SignInView(), binding: SignInBinding()),
